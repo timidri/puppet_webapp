@@ -1,4 +1,4 @@
-ipcrm/puppet_webapp:
+timidri/puppet_webapp:
   Env:
     - PORT: "8080"
   PreBuild:
