@@ -2,10 +2,10 @@ timidri/puppet_webapp:
   Env:
     - PORT: "8080"
   PreBuild:
-    - sudo pip install tox
+    - sh -x scripts/pre_build.sh
   Build:
-    - tox
-    - python ./setup.py sdist
+    - export SONAR_LOGIN=$SONAR_LOGIN
+    - sh -x scripts/build.sh
   PkgInclude:
     - 'dist/*.tar.gz'
   PreInstall:
@@ -24,3 +24,9 @@ timidri/puppet_webapp:
     - sudo iptables -I INPUT -p tcp -m multiport --dports $PORT -m comment --comment "110 allow http ${PORT} access" -j ACCEPT
     - publicip=$(curl -s ident.me) || true
     - 'echo "URL: http://$publicip:$PORT"'
+    - curl -s "http://$publicip:$PORT" > /dev/null
+    - SMOKETEST=$?
+    - if [ $SMOKETEST != 0 ]; then
+    -   echo "Failed smoke test!"
+    -   exit 1
+    - fi

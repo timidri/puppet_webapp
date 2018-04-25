@@ -9,3 +9,8 @@ puppet_webapp.egg-info/
 .eggs
 .python-version
 venv/
+.coverage
+.scannerwork
+coverage.xml
+reports/
+.pytest_cache
