@@ -1,1 +1,1 @@
-__version__ = '0.1.28-DevHops'
+__version__ = '0.1.28'
