@@ -1,1 +1,1 @@
-__version__ = '0.1.28'
+__version__ = 'Free Beer All Day! (after 6 PM)'
