@@ -6,4 +6,4 @@ chmod +x jq
 curl -s -L -o sonar.zip 'https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778-linux.zip'
 unzip -d /var/tmp/sonar sonar.zip
 chmod +x /var/tmp/sonar/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner
-sudo ln -s /var/tmp/sonar/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner /usr/local/bin/sonar-scanner
+sudo ln -fs /var/tmp/sonar/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner /usr/local/bin/sonar-scanner
