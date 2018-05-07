@@ -1,4 +1,4 @@
-timidri/puppet_webapp:
+seteam/puppet_webapp:
   Env:
     - PORT: "8080"
   PreBuild:
