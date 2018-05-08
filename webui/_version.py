@@ -1,1 +1,1 @@
-__version__ = '0.1.43 BT DEMO'
+__version__ = '0.1.43 Happy Tuesday'
