@@ -1,1 +1,1 @@
-__version__ = 'Hello Amsterdam!'
+__version__ = 'Hello Amsterdam 2!'
