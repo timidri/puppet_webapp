@@ -1,1 +1,1 @@
-__version__ = 'Biertje?'
+__version__ = 'DevHops 1.0'
