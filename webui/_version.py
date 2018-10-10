@@ -1,1 +1,1 @@
-__version__ = '0.1.43 Happy Tuesday'
+__version__ = '1.0.0 Plive2018'
