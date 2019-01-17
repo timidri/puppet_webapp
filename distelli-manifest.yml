@@ -9,10 +9,10 @@ timidri/puppet_webapp:
   PkgInclude:
     - 'dist/*.tar.gz'
   PreInstall:
-    - sudo yum install -y python-pip python-virtualenv gcc gcc-c++
+    - sudo yum install -y python34-pip python34-virtualenv gcc gcc-c++
     - test -d ~/virtualenv || mkdir ~/virtualenv
     - test -d ~/virtualenv/puppet_webapp && rm -rf ~/virtualenv/puppet_webapp
-    - virtualenv ~/virtualenv/puppet_webapp
+    - virtualenv-3 ~/virtualenv/puppet_webapp
   PostInstall:
     - source ~/virtualenv/puppet_webapp/bin/activate
     - pip install dist/*
